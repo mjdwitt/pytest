@@ -520,8 +520,9 @@ class Module(nodes.File, PyCollector):
                 "  %s\n"
                 "which is not the same as the test file we want to collect:\n"
                 "  %s\n"
-                "HINT: remove __pycache__ / .pyc files and/or use a "
-                "unique basename for your test file modules" % e.args
+                "HINT: remove __pycache__ / .pyc files, use a "
+                "unique basename for your test file modules, and/or "
+                "ensure an __init__.py is present in file folders" % e.args
             )
         except ImportError:
             exc_info = ExceptionInfo.from_current()
